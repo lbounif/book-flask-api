@@ -1,8 +1,7 @@
 from .db import db
 
-class Book(db.Docuemnt){
+class Book(db.Document):
     title = db.StringField(required=True, unique=True)
-    author = db.StringField(db.StringField(), required=True)
-    language = db.IntField(db.IntField(), required=True)
+    author = db.StringField(required=True, unique=True)
+    language = db.IntField(required=True, unique=True)
     pages = db.ListField(db.StringField(), required=True)
-}

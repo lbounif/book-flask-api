@@ -1,4 +1,5 @@
 from .db import db
+from flask_bcrypt import generate_password_hash, check_password_hash
 
 class Book(db.Document):
     title = db.StringField(required=True, unique=True)
